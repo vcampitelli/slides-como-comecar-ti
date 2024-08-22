@@ -1,3 +1,4 @@
+/* Layout */
 :root {
     --r-background-color: #1b1b1f;
     --r-block-margin: var(--size-md);
@@ -5,6 +6,7 @@
     --r-heading-font-weight: 700;
     --r-heading-font: var(--r-main-font);
     --r-heading-letter-spacing: -0.022em;
+    --r-heading-line-height: 1.1;
     --r-heading-margin: 0 0 var(--size-md) 0;
     --r-heading-text-transform: normal;
     --r-main-color: #c6c5d0;
@@ -18,7 +20,7 @@
     --border-radius: 5px;
     --color-subheading: #90909a;
     --color-muted: var(--color-subheading);
-    /*--color-red: #B84A62;*/
+    --color-red: #B84A62;
 
     /* LiftKit Spacing */
     --size-xs: 0.128em;
@@ -28,10 +30,23 @@
     --size-xl: 1.618em;
     --size-xxl: 2.618em;
 }
-
 .reveal .slides {
     text-align: left;
     letter-spacing: var(--r-heading-letter-spacing);
+}
+.reveal .slide-number {
+    border-radius: var(--border-radius);
+    right: auto;
+    left: 8px;
+}
+
+/* Primeiro slide */
+#first-slide > h1 {
+    --r-heading-margin: 0 0 var(--size-sm) 0;
+}
+#first-slide > h2 {
+    --r-heading-margin: 0;
+    color: var(--color-red);
 }
 
 /* Cabeçalhos */
@@ -47,6 +62,10 @@ h1.subtitle {
 /* Imagens */
 figure > img {
     --r-block-margin: 0;
+}
+img {
+    border-radius: var(--border-radius);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
 }
 figure > figcaption,
 pre + p {
@@ -78,14 +97,25 @@ blockquote > cite:before {
 .reveal pre {
     margin-left: 0;
     width: 100%;
-    letter-spacing: -0.044em;
 }
-code.hljs {
+.reveal pre.code-standalone {
+    padding: var(--size-md) var(--size-lg);
     border-radius: var(--border-radius);
     background-color: var(--background-color-darker);
 }
+code.hljs {
+    line-height: 1.6;
+    border-radius: var(--border-radius);
+    background-color: var(--background-color-darker);
+}
+code:not(.hljs) {
+    color: var(--color-red);
+}
 code.hljs.language-plaintext {
     white-space: wrap;
+}
+code.hljs.wrap {
+    white-space: pre-wrap;
 }
 
 /* Referências */
@@ -136,6 +166,15 @@ a.reference:after {
 }
 .mt-xxl {
     margin-top: var(--size-xxl) !important;
+}
+p:first-child {
+    margin-top: 0;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+img:only-child {
+    --r-block-margin: 0;
 }
 
 /* Tipografia */

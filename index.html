@@ -34,7 +34,7 @@
                         <h1>Sobre</h1>
                     </section>
                     <section data-auto-animate>
-                        <h1>Sobre</h1>
+                        <h1 class="subtitle">Sobre</h1>
                         <h2>Sobre mim</h2>
                         <div id="about-me">
                             <div class="text-center">
@@ -145,13 +145,13 @@
                         </div>
                     </section>
                     <section>
-                        <h1>Sobre</h1>
+                        <h1 class="subtitle">Sobre</h1>
                         <h2>Slides</h2>
-                        <div class="d-flex justify-start items-center">
-                            <div style="flex-shrink: 0">
+                        <div class="d-flex cols-2 justify-start items-center">
+                            <div>
                                 <a href="https://viniciuscampitelli.com/slides-como-comecar-ti" target="_blank"
                                    rel="noopener" class="d-block">
-                                    <img src="img/qrcode-slides.png" alt="Workshops" class="my-0">
+                                    <img src="img/qrcode.png" alt="Slides" style="max-height: 400px;">
                                 </a>
                             </div>
                             <div class="qrcode-featured-text">
@@ -167,10 +167,13 @@
                 </section> <!-- Sobre -->
 
                 <section> <!-- Soft Skills -->
-                    <section>
-                        <h2>Todo dia...</h2>
+                    <section data-auto-animate data-auto-animate-restart>
+                        <h1>Todo dia...</h1>
+                    </section>
+                    <section data-auto-animate>
+                        <h1>Todo dia...</h1>
                         <ul>
-                            <li class="fragment">
+                            <li>
                                 ... um novo <em>framework</em>, biblioteca, ferramenta ou padrão de codificação surge...
                             </li>
                             <li class="fragment">
@@ -187,7 +190,7 @@
                             O que há de comum em tudo isso?
                         </h4>
                     </section>
-                    <section data-auto-animate>
+                    <section data-auto-animate data-auto-animate-restart>
                         <h1>Pessoas</h1>
                     </section>
                     <section data-auto-animate>
@@ -283,22 +286,33 @@
                     </section>
                     <section data-auto-animate>
                         <h1>Áreas</h1>
-                        <ul>
-                            <li>Arquitetura de Sistemas</li>
-                            <li>Banco de Dados</li>
-                            <li>Dados / <em>Business Intelligence</em></li>
-                            <li>Desenvolvimento</li>
-                            <li><em>Design</em> (UI / UX)</li>
-                            <li><em>Developer Relations</em></li>
-                            <li>Gestão de Equipes</li>
-                            <li>Gestão de Processos</li>
-                            <li>Infraestrutura / DevOps</li>
-                            <li>Inteligência Artificial</li>
-                            <li>Qualidade</li>
-                            <li>Recrutamento e Seleção</li>
-                            <li>Segurança</li>
-                            <li>Suporte</li>
-                        </ul>
+                        <p>Apenas alguns exemplos de onde atuar com tecnologia...</p>
+                        <div class="d-flex cols-2">
+                            <div>
+                                <ul>
+                                    <li>Arquitetura de Sistemas</li>
+                                    <li>Banco de Dados</li>
+                                    <li>Dados / <em>Business Intelligence</em></li>
+                                    <li>Desenvolvimento</li>
+                                    <li><em>Design</em> (UI / UX)</li>
+                                    <li><em>Developer Relations</em></li>
+                                    <li>Gestão de Equipes</li>
+                                    <li>Governança</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>Infraestrutura / DevOps</li>
+                                    <li>Inteligência Artificial</li>
+                                    <li>Marketing</li>
+                                    <li>Metodologias Ágeis</li>
+                                    <li>Qualidade</li>
+                                    <li>Recrutamento e Seleção</li>
+                                    <li>Segurança</li>
+                                    <li>Suporte</li>
+                                </ul>
+                            </div>
+                        </div>
                     </section>
                     <section data-auto-animate>
                         <h1>Áreas</h1>
@@ -320,12 +334,6 @@
                         </ul>
                     </section>
                 </section> <!-- Áreas -->
-
-                <section> <!-- Ferramentas -->
-                    <section>
-                        <h1>Ferramentas</h1>
-                    </section>
-                </section> <!-- Ferramentas -->
 
                 <section> <!-- Dicas -->
                     <section>
@@ -361,27 +369,6 @@
                     </section>
                     <section>
                         <h1 class="subtitle">Dicas</h1>
-                        <h2>Desenvolvimento</h2>
-                        <div class="d-flex cols-2">
-                            <div>
-                                Para quem quer seguir em Desenvolvimento: <b>realmente entenda</b> conceitos básicos
-                                de lógica, blocos de controle/repetição, recursão e estruturas de dados
-                            </div>
-                            <div>
-                                <pre><code class="typescript" data-trim>
-                                    function fibonacci(n: number) {
-                                      if (n < 2) {
-                                        return n;
-                                      }
-                                      return fibonacci(n - 1) + fibonacci(n - 2);
-                                    }
-                                </code></pre>
-                                <p>Exemplo do algoritmo de Fibonacci usando TypeScript</p>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                        <h1 class="subtitle">Dicas</h1>
                         <h2>Git</h2>
                         <p>
                             Aprenda o básico do Git e crie seu portfólio em plataformas como o GitHub com seus projetos
@@ -403,18 +390,132 @@
                             </a>
                         </div>
                     </section>
-                    <section data-auto-animate>
+                    <section>
                         <h1 class="subtitle">Dicas</h1>
-                        <h2>Dicas finais</h2>
+                        <h2>Desenvolvimento</h2>
+                        <div class="d-flex cols-2">
+                            <div>
+                                Para quem quer seguir em Desenvolvimento: <b>realmente entenda</b> conceitos básicos
+                                de lógica, blocos de controle/repetição, recursão e estruturas de dados
+                            </div>
+                            <div>
+                                <pre><code class="typescript" data-trim>
+                                    function fibonacci(n: number) {
+                                      if (n < 2) {
+                                        return n;
+                                      }
+                                      return fibonacci(n - 1) + fibonacci(n - 2);
+                                    }
+                                </code></pre>
+                                <p>Exemplo do algoritmo de Fibonacci usando TypeScript</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Dicas</h1>
+                        <h2>Como a Internet funciona?</h2>
+                        <div class="d-flex cols-2">
+                            <div>
+                                <p>
+                                    Para trabalhar com desenvolvimento Web e Mobile, você precisa entender como funciona
+                                    o protocolo HTTP e como o navegador interage com ele
+                                </p>
+                                <p>
+                                    Também é importante saber como domínios e serviços de DNS atuam
+                                </p>
+                            </div>
+                            <div>
+                                <img src="img/http.gif" alt="Exemplo de navegador carregando o google.com">
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Dicas</h1>
+                        <h2>Banco de Dados</h2>
+                        <div class="d-flex cols-2">
+                            <div>
+                                <p>
+                                    Em diversas áreas, é essencial entender SQL, relacionamentos entre entidades e uso
+                                    dos <code>JOIN</code>s
+                                </p>
+                                <p>
+                                    Um diferencial é saber sobre as diferenças de bancos de dados relacionais e
+                                    não-relacionais
+                                </p>
+                            </div>
+                            <div>
+                                <pre><code class="sql" data-trim>
+                                    SELECT * FROM `matriculas`
+                                    INNER JOIN `alunos`
+                                        ON `matriculas`.`id_aluno` = `alunos`.`id_aluno`
+                                    INNER JOIN `cursos`
+                                        ON `matriculas`.`id_curso` = `cursos`.`id_curso`
+                                    WHERE `matriculas`.`id_turma` = 5
+                                        AND `matriculas`.`id_matricula_estado` = 1
+                                        AND `cursos`.`id_curso_estado` = 1
+                                    ORDER BY `alunos`.`nome`
+                                </code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Dicas</h1>
+                        <h2>Documentação</h2>
+                        <div class="d-flex cols-2">
+                            <div>
+                                <p>
+                                    Ao entregar testes técnicos, escreva um arquivo <code>README.md</code> mostrando o
+                                    que foi feito &mdash; e também o que não foi &mdash;, suas dificuldades no processo,
+                                    além dos passos de como configurar e executar seu projeto
+                                </p>
+                            </div>
+                            <div>
+                                <pre><code class="markdown wrap" data-trim>
+                                    # Entrega do projeto
+
+                                    Tive problemas em usar o pacote X que me pediram, então acabei utilizando Y
+
+                                    # Como instalar
+
+                                    Execute `npm install` na raiz do projeto
+
+                                    # Como executar
+
+                                    Acesse o endereço [localhost:3000](http://localhost:3000) no navegador
+                                </code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Dicas</h1>
+                        <h2>Comunidade</h2>
+                        <div class="d-flex cols-2">
+                            <div>
+                                <p>
+                                    <em>Networking</em> é extremamente importante, então participe de eventos,
+                                    <em>meetups</em>, comunidades (<em>online</em> e <em>offline</em>), e afins
+                                </p>
+                                <p>
+                                    Nesses locais, você conhece <b>pessoas</b> que trabalham ou não na área, aprende
+                                    novas tecnologias, socializa e encurta a distância para seu novo trabalho
+                                </p>
+                            </div>
+                            <div>
+                                <figure>
+                                    <img src="img/meetup.jpg" alt="Meetup do PHPSP">
+                                    <figcaption>Meetup do PHPSP</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-auto-animate data-auto-animate-restart>
+                        <h1 class="subtitle">Dicas</h1>
+                        <h2>Mais dicas</h2>
                         <ul>
                             <li>
                                 Faça cursos em plataformas como a
                                 <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a> e
                                 <a href="https://www.udemy.com/pt/" target="_blank" rel="noopener">Udemy</a>
-                            </li>
-                            <li class="fragment">
-                                <em>Networking</em> é extremamente importante, então participe de eventos,
-                                <em>meetups</em>, comunidades (<em>online</em> e <em>offline</em>), e afins
                             </li>
                             <li class="fragment">
                                 Você pode começar como <em>freelancer</em> em plataformas como
@@ -431,7 +532,7 @@
                     </section>
                     <section data-auto-animate>
                         <h1 class="subtitle">Dicas</h1>
-                        <h2>Dicas finais</h2>
+                        <h2>Mais dicas</h2>
                         <ul>
                             <li>
                                 Aprenda a ler em inglês, já que muitos conteúdos estão nessa língua &mdash; e
@@ -439,14 +540,14 @@
                                 <img src="img/traducao.png" alt="Exemplo de tradução errada">
                             </li>
                             <li class="fragment">
-                                Tenha curiosidade sobre como as coisas funcionam, assim você exercita suas habilidades
-                                de aprender coisas novas
+                                Tenha curiosidade sobre como as coisas funcionam, assim você exercita sua capacidade
+                                de adquirir novas habilidades &mdash; o famoso "aprendendo a aprender"
                             </li>
                         </ul>
                     </section>
                     <section data-auto-animate>
                         <h1 class="subtitle">Dicas</h1>
-                        <h2>Dicas finais</h2>
+                        <h2>Mais dicas</h2>
                         <ul>
                             <li>
                                 Ao encontrar erros durante o desenvolvimento de seus projetos, antes de pesquisar em
@@ -459,22 +560,37 @@
                                         verdade não se aplicava ao contexto
                                     </li>
                                 </ul>
+                                <div class="fragment mt-lg">
+                                    <p>Exemplo:</p>
+                                    <pre class="code-wrapper code-standalone">
+                                        Aws\Exception\CredentialsException: Error retrieving credentials from the
+                                        instance profile metadata service.
+                                        <span class="fragment">
+                                        (cURL error 7: Failed to connect to 169.254.169.254 port 80 after 707 ms:</span>
+                                        <span class="fragment">Host is unreachable)</span>
+                                    </pre>
+                                </div>
                             </li>
                         </ul>
-                        <div class="fragment">
-                            <p>Exemplo:</p>
-                            <pre><code class="plaintext" data-trim>
-                                Aws\Exception\CredentialsException: Error retrieving credentials from the instance
-                                profile metadata service.
-                                (cURL error 7: Failed to connect to 169.254.169.254 port 80 after 707 ms: Host is
-                                unreachable)
-                            </code></pre>
-                        </div>
+                    </section>
+                    <section data-auto-animate>
+                        <h1 class="subtitle">Dicas</h1>
+                        <h2>Mais dicas</h2>
+                        <p>
+                            <b>Seja forte</b>. Sei que é difícil começar, e que o mercado já esteve mais
+                            aquecido anteriormente (principalmente durante a pandemia), mas também já esteve pior
+                            (logo após esse período).<br>
+                        <p>
+                        <p>
+                            Trabalhar com tecnologia é desafiador, complexo, e pode até parecer impossível com a
+                            velocidade em que as coisas mudam, mas é muito gratificante poder impactar inúmeras pessoas
+                            através dela.
+                        </p>
                     </section>
                 </section> <!-- Dicas -->
 
                 <section> <!-- Obrigado -->
-                    <h1 class="text-center title">Obrigado!</h1>
+                    <h1 class="text-center">Obrigado!</h1>
                     <div class="about-me-links">
                         <div>
                             <svg role="img" width="64px" height="64px" viewBox="0 0 24 24"
