@@ -1,0 +1,235 @@
+:root {
+    --r-background-color: #1b1b1f;
+    --r-block-margin: var(--size-md);
+    --r-heading-color: #e4e1e6;
+    --r-heading-font-weight: 700;
+    --r-heading-font: var(--r-main-font);
+    --r-heading-letter-spacing: -0.022em;
+    --r-heading-margin: 0 0 var(--size-md) 0;
+    --r-heading-text-transform: normal;
+    --r-main-color: #c6c5d0;
+    --r-main-font-size: 28px;
+    --r-main-font: Inter, Arial, sans-serif;
+    --r-link-color: #b9c3ff;
+    --r-link-color-hover: #0471a6;
+    --r-link-color-dark: #275dad;
+
+    --background-color-darker: #101013;
+    --border-radius: 5px;
+    --color-subheading: #90909a;
+    --color-muted: var(--color-subheading);
+    /*--color-red: #B84A62;*/
+
+    /* LiftKit Spacing */
+    --size-xs: 0.128em;
+    --size-sm: 0.272em;
+    --size-md: 0.618em;
+    --size-lg: 1em;
+    --size-xl: 1.618em;
+    --size-xxl: 2.618em;
+}
+
+.reveal .slides {
+    text-align: left;
+    letter-spacing: var(--r-heading-letter-spacing);
+}
+
+/* Cabeçalhos */
+h1.subtitle {
+    --r-heading1-size: 0.8em;
+    --r-heading-margin: 0;
+    --r-heading-color: var(--color-subheading);
+    --r-heading-font-weight: 500;
+    --r-heading-letter-spacing: -1px;
+    --r-heading-line-height: 1;
+}
+
+/* Imagens */
+figure > img {
+    --r-block-margin: 0;
+}
+figure > figcaption,
+pre + p {
+    font-style: italic;
+    font-size: var(--size-md);
+    color: var(--color-muted);
+}
+
+/* Quote */
+.reveal blockquote {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 0 0 var(--size-lg);
+    font-size: 0.87em;
+    letter-spacing: -0.022em;
+    background: none;
+    border-left: 3px var(--r-main-color) solid;
+}
+blockquote > cite {
+    display: block;
+    opacity: 0.7;
+    font-size: 0.8em;
+}
+blockquote > cite:before {
+    content: "— ";
+}
+
+/* Código */
+.reveal pre {
+    margin-left: 0;
+    width: 100%;
+    letter-spacing: -0.044em;
+}
+code.hljs {
+    border-radius: var(--border-radius);
+    background-color: var(--background-color-darker);
+}
+code.hljs.language-plaintext {
+    white-space: wrap;
+}
+
+/* Referências */
+div.references,
+a.reference {
+    display: block;
+    font-size: 0.75em;
+    margin-top: 1em;
+    opacity: 0.8;
+}
+.references > a {
+    display: inline-block;
+}
+.references > a:before,
+a.reference:before {
+    opacity: 0.5;
+    content: "[ ";
+}
+.references > a:after,
+a.reference:after {
+    opacity: 0.5;
+    content: " ]";
+}
+
+/* Layout */
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+.d-flex.cols-2 > div {
+    flex: calc(50% - 10px) 1 0;
+}
+.mt-xs {
+    margin-top: var(--size-xs) !important;
+}
+.mt-sm {
+    margin-top: var(--size-sm) !important;
+}
+.mt-md {
+    margin-top: var(--size-md) !important;
+}
+.mt-lg {
+    margin-top: var(--size-lg) !important;
+}
+.mt-xl {
+    margin-top: var(--size-xl) !important;
+}
+.mt-xxl {
+    margin-top: var(--size-xxl) !important;
+}
+
+/* Tipografia */
+.fw-bold {
+    font-weight: 600;
+}
+.text-center {
+    text-align: center;
+}
+.text-strike {
+    text-decoration: line-through;
+}
+.text-muted {
+    color: var(--color-muted);
+}
+
+/* Alert */
+.alert {
+    margin-top: var(--size-lg);
+    padding: calc(0.85 * var(--size-lg)) var(--size-lg);
+    background: var(--r-link-color);
+    color: var(--r-link-color-dark);
+    font-size: var(--size-md);
+    border-radius: var(--border-radius);
+}
+.alert > a {
+    color: var(--r-link-color-dark);
+    font-weight: 500;
+}
+.alert > a:is(:hover, :focus) {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Listas */
+li + li,
+li > ul {
+    margin-top: var(--size-sm) !important;
+}
+li > ul {
+    font-size: 0.9em;
+}
+
+/* Sobre mim */
+#about-me {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 3rem;
+}
+#about-me > ul {
+    list-style-type: circle;
+}
+#about-me > ul > li + li {
+    margin-top: 0.2em;
+}
+#about-me-name {
+    font-weight: 600;
+    line-height: 1;
+}
+#profile-pic {
+    margin: 0;
+    border-radius: var(--border-radius);
+}
+.about-me-links {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 1.25rem;
+    justify-content: start;
+}
+.about-me-links > div {
+    flex: 33.333% 0 0;
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    column-gap: 0.4em;
+}
+.about-me-links > div > svg {
+    width: 40px;
+}
+.about-me-links > div > div {
+    line-height: 1;
+}
+.about-me-links > div > svg .fill {
+    fill: var(--r-link-color);
+}
+.about-me-links > div > svg .fill-bg {
+    fill: var(--r-background-color);
+}
+.about-me-links > div > div > p {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1;
+}
+.about-me-links > div > div > a {
+    font-weight: 600;
+}
